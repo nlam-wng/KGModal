@@ -18,7 +18,7 @@ NSString *const KGModalGradientViewTapped = @"KGModalGradientViewTapped";
 @end
 
 @interface KGModalContainerView : UIView
-@property (weak, nonatomic) CALayer *styleLayer;
+@property (unsafe_unretained, nonatomic) CALayer *styleLayer;
 @property (strong, nonatomic) UIColor *modalBackgroundColor;
 @end
 
@@ -26,16 +26,16 @@ NSString *const KGModalGradientViewTapped = @"KGModalGradientViewTapped";
 @end
 
 @interface KGModalViewController : UIViewController
-@property (weak, nonatomic) KGModalGradientView *styleView;
+@property (unsafe_unretained, nonatomic) KGModalGradientView *styleView;
 @end
 
 @interface KGModal()
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) UIViewController *contentViewController;
-@property (weak, nonatomic) KGModalViewController *viewController;
-@property (weak, nonatomic) KGModalContainerView *containerView;
-@property (weak, nonatomic) KGModalCloseButton *closeButton;
-@property (weak, nonatomic) UIView *contentView;
+@property (unsafe_unretained, nonatomic) KGModalViewController *viewController;
+@property (unsafe_unretained, nonatomic) KGModalContainerView *containerView;
+@property (unsafe_unretained, nonatomic) KGModalCloseButton *closeButton;
+@property (unsafe_unretained, nonatomic) UIView *contentView;
 
 @end
 
